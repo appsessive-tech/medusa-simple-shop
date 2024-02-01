@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Medusa.js-debug-server-side",
+        "cwd": "${workspaceFolder}/medusa-simple-shop",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "npm run dev"
+      },
+      {
+        "name": "Medusa.js-debug-client-side",
+        "cwd": "${workspaceFolder}/medusa-simple-shop-storefront",
+        "type": "node-terminal",
+        "request": "launch",
+        "command": "npm run dev",
+        "serverReadyAction": {
+          "pattern": "listening on port ([0-9]+)",
+          "uriFormat": "http://localhost:%s",
+          "action": "openExternally"
+        }
+      }
+    ],
+    "compounds": [
+      {
+        "name": "Medusa.js-debug-full-stack",
+        "configurations": ["Medusa.js-debug-server-side", "Medusa.js-debug-client-side"],
+        // "preLaunchTask": "${defaultBuildTask}",
+        "stopAll": true
+      }
+    ]
+  }
