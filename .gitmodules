@@ -1,0 +1,7 @@
+[submodule "medusa-simple-shop"]
+ path = medusa-simple-shop
+ url = https://github.com/appsessive-tech/medusa-simple-shop-server.git
+
+[submodule "medusa-simple-shop-storefront"]
+ path = medusa-simple-shop-storefront
+ url = https://github.com/appsessive-tech/medusa-simple-shop-client.git
